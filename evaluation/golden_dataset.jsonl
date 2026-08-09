@@ -1,0 +1,3 @@
+{"name":"paris_london_bad_claim","lat1":48.8566,"lon1":2.3522,"lat2":51.5074,"lon2":-0.1278,"claimed_distance_km":900,"expected":"Inaccurate"}
+{"name":"paris_london_good_claim","lat1":48.8566,"lon1":2.3522,"lat2":51.5074,"lon2":-0.1278,"claimed_distance_km":344,"expected":"Accurate"}
+{"name":"nyc_la_bad_claim","lat1":40.7128,"lon1":-74.0060,"lat2":34.0522,"lon2":-118.2437,"claimed_distance_km":2000,"expected":"Inaccurate"}
