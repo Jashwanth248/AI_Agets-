@@ -1,0 +1,25 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - ENABLE_CLOUD_LOGGING=false
+      - AUDIT_DB_PATH=/app/artifacts/auditor.db
+    volumes:
+      - auditor_data:/app/artifacts
+    restart: unless-stopped
+
+  ui:
+    build: .
+    command: streamlit run ui/streamlit_app.py --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://api:8000
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  auditor_data:
