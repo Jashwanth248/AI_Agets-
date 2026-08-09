@@ -1,0 +1,18 @@
+# Core ADK + GenAI
+google-adk>=1.0.0
+google-genai>=1.0.0
+python-dotenv>=1.0.1
+
+# Optional cloud logging (only used if ENABLE_CLOUD_LOGGING=true)
+google-cloud-logging>=3.11.0
+
+# API layer
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0
+
+# Demo UI
+streamlit>=1.39.0
+
+# HTTP client for demo UI
+requests>=2.32.0
